@@ -86,6 +86,8 @@ img {
 	
 	.nav a {
 		background-color: #ffffff;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
 		display: block;
 		color: #3d3d3d;
 		font-size: 1.125em;
@@ -94,11 +96,11 @@ img {
 		text-align: center;
 		text-transform: uppercase;
 		padding: .4em;
-		border-bottom: 1px solid #ebecec;
 	}
 	.nav a:hover {
-		color:#0b0b0b;
-		border-bottom-color: #52bab3;
+		color:#52bab3;
+		border-top: 1px solid #52bab3;
+		border-bottom: 1px solid #52bab3;
 	}
 
 
@@ -244,6 +246,65 @@ footer h2 {
 				border-bottom-color: transparent;
 			}		
 
+
+		/* Navigation Hover Styles */
+		.nav li a {
+			position: relative;
+			padding: 10px;
+			text-shadow: none;
+			-webkit-transition: color 0.3s;
+			-moz-transition: color 0.3s;
+			transition: color 0.3s;
+		}
+		
+		.nav li a::before,
+		.nav li a::after {
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: #52bab3;
+			content: '';
+			opacity: 0;
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+			-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+			transition: opacity 0.3s, transform 0.3s;
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+		
+		.nav li a::before {
+			top: 0;
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			transform: translateY(-10px);
+		}
+		
+		.nav li a::after {
+			bottom: 0;
+			-webkit-transform: translateY(10px);
+			-moz-transform: translateY(10px);
+			transform: translateY(10px);
+		}
+		
+		.nav li a:hover,
+		.nav li a:focus {
+			color: #52bab3;
+		}
+		
+		.nav li a:hover::before,
+		.nav li a:focus::before,
+		.nav li a:hover::after,
+		.nav li a:focus::after {
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+
+
+
 	.intro {
 		flex-direction: row;
 		text-align: left;
@@ -354,7 +415,7 @@ footer h2 {
 				margin-left: .65em;
 				margin-right: .65em;
 			}
-			
+
 
 		.intro-column_left p {
 			font-size: 1.625em;/* 26px */
