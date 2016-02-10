@@ -66,6 +66,14 @@ img {
 		color: #4a4a4a;
 		font-size: 1.875em;/*30px*/
 		font-weight: 800;
+		letter-spacing: normal;
+	}
+	.site-logo span:hover {
+		color: #52bab3;
+		letter-spacing: -.5px;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		transition: all 0.5s ease;
 	}
 
 
@@ -86,8 +94,8 @@ img {
 	
 	.nav a {
 		background-color: #ffffff;
-		border-top: 1px solid #fff;
-		border-bottom: 1px solid #fff;
+		border-top: 1px solid #fafafa;
+		border-bottom: 1px solid #fafafa;
 		display: block;
 		color: #3d3d3d;
 		font-size: 1.125em;
@@ -187,8 +195,17 @@ footer h2 {
 
 	a.site-logo_footer span{
 		color:#3b3b3b;
-		font-weight: 700;
+		font-weight: 800;
+		letter-spacing: normal;		
 	}
+		a.site-logo_footer span:hover {
+			color: #52bab3;
+			letter-spacing: -.5px;
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+
 
 	a.back-top_button {
 		color:#3b3b3b;
@@ -243,6 +260,8 @@ footer h2 {
 			
 			.nav a {
 				background-color: #fafafa;
+				border-top: none;
+				border-bottom: none;
 				border-bottom-color: transparent;
 			}		
 
@@ -290,6 +309,8 @@ footer h2 {
 		
 		.nav li a:hover,
 		.nav li a:focus {
+			border-top: none;
+			border-bottom: none;
 			color: #52bab3;
 		}
 		
